@@ -15,8 +15,11 @@ def get_pets_sold(sold_pets):
     return sold_pets["admin"]["pets_sold"]
 
 
-#def get_stock_count(number_of_pets):
-#    return len["cc_pet_shop"]
+def increase_pets_sold(current_number, sold_pets):
+    current_number["admin"]["pets_sold"] += sold_pets
+
+def get_stock_count(number_of_pets):
+    print (len(cc_pet_shop["pets"]))
 
 #def remove_pet_by_name(list, name_of_pet):
 #  names_of_pets = []
