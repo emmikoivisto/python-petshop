@@ -34,17 +34,14 @@ def find_pet_by_name(pet_shop, name):
         if pet["name"] == name:
             return pet
 
+#doesn't work
 def remove_pet_by_name(pet_shop, name):
     pet_list = []
     for pet in pet_shop["pets"]:
         if pet["name"] == name:
             pet_list.remove(name)
-    return pet_list
 
-#def remove_pet_by_name(list, name_of_pet):
-#  names_of_pets = []
-#  for name in list:
-#    if name["pets"]["name"] == name_of_pet:
-#      names_of_pets.del(name)
-#      print(names_of_pets)
-
+def add_pet_to_stock(pet_shop, new_pet):
+    pet_list = []
+    for pet in pet_shop["pet"]:
+        pet_list.append(new_pet)
