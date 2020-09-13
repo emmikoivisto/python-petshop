@@ -18,8 +18,28 @@ def get_pets_sold(sold_pets):
 def increase_pets_sold(current_number, sold_pets):
     current_number["admin"]["pets_sold"] += sold_pets
 
-def get_stock_count(number_of_pets):
-    print (len(cc_pet_shop["pets"]))
+def get_stock_count(pet_shop):
+    return len(pet_shop["pets"])
+
+def get_pets_by_breed(pet_shop, breed):
+    pet_list = []
+    for pet_breed in pet_shop["pets"]:
+        if pet_breed["breed"] == breed:
+            pet_list.append(pet_breed)
+    return pet_list
+
+
+def find_pet_by_name(pet_shop, name):
+    for pet in pet_shop["pets"]:
+        if pet["name"] == name:
+            return pet
+
+def remove_pet_by_name(pet_shop, name):
+    pet_list = []
+    for pet in pet_shop["pets"]:
+        if pet["name"] == name:
+            pet_list.remove(name)
+    return pet_list
 
 #def remove_pet_by_name(list, name_of_pet):
 #  names_of_pets = []
